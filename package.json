@@ -1,5 +1,5 @@
 {
-  "name": "ttt-assignment",
+  "name": "invictus-assignment",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,5 +20,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3015"
+  "proxy": "http://localhost:8000"
 }

@@ -1,7 +1,7 @@
-# Teribly Tiny Tales Assignment
+# Invictus Assignment
 Impleted Using Create React Project as Front-end with bootstrap css and Node.js as Backend.
 
-Live - [preview here](https://ttt-assignment.herokuapp.com/)
+Live - [preview here](https://invictus-work.herokuapp.com/)
 
 
 ## Folder Structure
@@ -33,14 +33,14 @@ In render function I iterate over the this.state.data array and create a row i.e
 Following packages are use:
 * express
 * body-parser - to parse the POST req body in node
-* axios - to make call to fetch a file hosted at [http://terriblytinytales.com/test.txt](http://terriblytinytales.com/test.txt)
+* axios - to make call to fetch a file hosted at [https://raw.githubusercontent.com/invictustech/test/main/README.md](https://raw.githubusercontent.com/invictustech/test/main/README.md)
 * cors - to enable cross origin resource sharing
 
 The ```GET /get-occurence``` endpoint is called after submitting the value of N from front-end. The N is passed in the query string.
 
-Let's undertand the code that fetches file test.txt and finds top N most frequent occurance words.
+Let's undertand the code that fetches file README.md and finds top N most frequent occurance words.
 
-We use ```axios.get``` to fetch the ```test.txt``` file from terriblytinytales website.
+We use ```axios.get``` to fetch the ```README.md``` file from Invictus website.
 
 I got the string in the ```result``` variable, then I replce the new line characters and tabs with spaces using ```result.replace(/\n\t/g, " ")```.
 
@@ -52,4 +52,3 @@ Then finally sort the ```OccurenceMap``` object by value i.e by count of occuren
 
 Then slice the top N most frequent words from the array and return it as response.
 
-## Test Cases

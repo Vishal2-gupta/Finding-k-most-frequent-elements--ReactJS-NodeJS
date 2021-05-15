@@ -1,23 +1,35 @@
 const express = require('express');
+
 const path = require('path');
+
 const bodyparser = require('body-parser');
+
 const cors = require('cors');
+
 const axios = require('axios');
-const PORT = process.env.PORT || 3015;
+
+const PORT = process.env.PORT || 8000;
+
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'build')));
+
 app.use(bodyparser.urlencoded({ limit: "50mb", extended: true }));
+
 app.use(bodyparser.urlencoded({ extended: false }));
 
 app.use(cors());
+
 app.get('/get-occurence', (req, res)=>{
   console.log('get occurence');
+
   let n = req.query.n || 10;
   let occurenceMap = {};
-  axios.get('http://terriblytinytales.com/test.txt')
+
+  axios.get('https://raw.githubusercontent.com/invictustech/test/main/README.md')
     .then(result=>{
       result = result.data;
+
       /* trim /n and /t */
       result = result.replace(/\n\t/g, " ");
       /* split the string by " " to get an array of words */
@@ -39,7 +51,7 @@ app.get('/get-occurence', (req, res)=>{
       res.json({Status: 1, data: occurenceMap, msg: 'success'});
     })
     .catch(error=>{
-      console.log('error in axios get test.txt as ',error);
+      console.log('error in axios get README.md as ',error);
       res.json({Status: 0, msg: 'Oops something went wrong. Please try again.'})
     })
 });
@@ -47,7 +59,8 @@ app.get('/get-occurence', (req, res)=>{
 /* function to sort the occurenceArray by the value i.e no of occurence*/
 function sortObjByOccurance(item){
   var occurenceArray = [];
-  for(key in item){
+  
+for(key in item){
     occurenceArray.push([key, item[key]]);
   }
   occurenceArray.sort((a,b)=>{

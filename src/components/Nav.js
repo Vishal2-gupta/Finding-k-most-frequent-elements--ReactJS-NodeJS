@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
+
 export default class Nav extends Component {
   render(){
-    var brandLink="http://terriblytinytales.com/";
-    return (
+    var brandLink="http://invictus.in/";
+  
+  return (
       <div>
         <nav className="navbar navbar-default" style={{fontWeight: 'bold', fontSize: '18px'}}>
           <div className="container-fluid">
