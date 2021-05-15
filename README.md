@@ -1,7 +1,7 @@
 # Invictus Assignment
 Impleted Using Create React Project as Front-end with bootstrap css and Node.js as Backend.
 
-Live - [preview here](https://invictus-work.herokuapp.com/)
+Live - [preview here](https://invictus-vishalassignments.herokuapp.com/ )
 
 
 ## Folder Structure
