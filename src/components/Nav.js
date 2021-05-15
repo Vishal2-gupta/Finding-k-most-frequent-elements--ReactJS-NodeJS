@@ -16,7 +16,7 @@ export default class Nav extends Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" href={brandLink} target="_blank"> ttt </a>
+              <a className="navbar-brand" href={brandLink} target="_blank"> Invictus </a>
             </div>
           </div>
         </nav>
